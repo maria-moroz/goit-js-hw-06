@@ -1,0 +1,21 @@
+.gallery {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 0;
+  padding: 0;
+}
+
+.gallery__item {
+  list-style: none;
+  padding: 0;
+}
+
+.gallery__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.gallery__image {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
