@@ -5,16 +5,19 @@ form.addEventListener('submit', onFormSubmit);
 function onFormSubmit(event) {
     event.preventDefault();
 
-    const {
-        elements: { email, password }
-    } = event.currentTarget;
+    const  { email, password } = event.currentTarget.elements;
 
     if (email.value === '' || password.value === '') {
         window.alert('Все поля должны быть заполнены!')
+    } else {
+        const data = {
+            email: email.value,
+            password: password.value
+        }
+        
+        console.log(`email: ${data.email}`);
+        console.log(`password: ${data.password}`);
     }
-
-    console.log(`${email.name}: ${email.value}`);
-    console.log(`${password.name}: ${password.value}`);
 
     event.currentTarget.reset();
 }

@@ -3,9 +3,11 @@ const validationInput = document.querySelector('#validation-input');
 validationInput.addEventListener('blur', checkInput)
 
 function checkInput(event) {
-    event.currentTarget.value.length == event.currentTarget.dataset.length
-        ? onValidInput() 
-        : onInvalidInput();
+    if (event.currentTarget.value.length.toString() === event.currentTarget.dataset.length) {
+        onValidInput();
+    } else {
+        onInvalidInput();
+    }
 }
 
 function onValidInput() {
