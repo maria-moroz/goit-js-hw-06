@@ -9,6 +9,7 @@ function numberOfCategories(items) {
 }
 
 function displayCategories(items) {
+    console.log(items);
     Array.prototype.forEach.call(items, item => {
         console.log('Category: ', item.firstElementChild.textContent);
         console.log('Elements: ', item.lastElementChild.children.length);
