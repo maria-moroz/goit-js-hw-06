@@ -9,8 +9,8 @@ function numberOfCategories(items) {
 }
 
 function displayCategories(items) {
-    for (let i = 0; i < items.length; i += 1) {
-        console.log('Category: ', items[i].firstElementChild.textContent);
-        console.log('Elements: ', items[i].lastElementChild.children.length);
-    }
+    Array.prototype.forEach.call(items, item => {
+        console.log('Category: ', item.firstElementChild.textContent);
+        console.log('Elements: ', item.lastElementChild.children.length);
+    });
 }
