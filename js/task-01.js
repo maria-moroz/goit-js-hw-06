@@ -1,5 +1,5 @@
 const list = document.querySelector('#categories');
-const listItems = list.children;
+const listItems = document.querySelectorAll('.item');
 
 numberOfCategories(listItems);
 displayCategories(listItems);
@@ -9,8 +9,7 @@ function numberOfCategories(items) {
 }
 
 function displayCategories(items) {
-    console.log(items);
-    Array.prototype.forEach.call(items, item => {
+    items.forEach( item => {
         console.log('Category: ', item.firstElementChild.textContent);
         console.log('Elements: ', item.lastElementChild.children.length);
     });
